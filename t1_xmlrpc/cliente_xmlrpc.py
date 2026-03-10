@@ -37,7 +37,8 @@ def main():
     # Operacao invalida — deve retornar Fault
     print("\n  Testando operacao invalida ('raiz_quadrada'):")
     try:
-        proxy.calcular("raiz_quadrada", 9.0, 0.0)
+        result= proxy.calcular("raiz_quadrada", 9.0, 0.0)
+        print(f"  calcular(raiz_quadrada de 9) = {result:.6f}")
     except xmlrpc.client.Fault as e:
         print(f"  Fault recebido: {e.faultString}")
 
